@@ -2,6 +2,8 @@ from modelos.restaurante import Restaurante
 from modelos.cardapio.bebida import Bebida
 from modelos.cardapio.prato import Prato
 
+from modelos.cardapio.bebida import Bebida
+from modelos.cardapio.prato import Prato
 
 restaurante_praca = Restaurante('praça', 'Gourmet')
 bebida_suco = Bebida('Suco de Melancia', 5.00, 'Grande')
@@ -12,6 +14,7 @@ restaurante_praca.adicionar_prato_no_cardapio(prato_paozinho)
 
 
 def main():
+    pass
     pass
 
 if __name__ == '__main__':
