@@ -8,7 +8,7 @@ prato_paozinho = Prato('Pãozinho', 3.00, 'O melhor pão da cidade')
 
 restaurante_praca.adicionar_no_cardapio(bebida_suco)
 restaurante_praca.adicionar_no_cardapio(prato_paozinho)
-
+restaurante_praca.exibir_cardapio
 
 def main():
     pass
