@@ -5,10 +5,26 @@ app = FastAPI()
 
 @app.get('/api/hello')
 def hello_world():
+    '''
+    Exemplo de endpoint que retorna uma mensagem simples.
+    '''
     return {'Hello': 'World'}
 
 @app.get('/api/restaurantes/')
 def get_restaurantes(restaurante: str = Query(None)):
+    '''
+    Endpoint para obter o cardápio de um restaurante específico ou todos os restaurantes.
+    
+    Parâmetros:
+    - restaurante: Nome do restaurante (opcional). Se não fornecido, retorna todos os restaurantes.
+    
+    Retorna:
+    - Dados de todos os restaurantes ou o cardápio de um restaurante específico.
+    
+    Exemplo de uso:
+    - Para obter todos os restaurantes: /api/restaurantes/
+    - Para obter o cardápio de um restaurante específico: /api/restaurantes/?restaurante=nome_do_restaurante
+    '''
     url = 'https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json'
     response = requests.get(url)
 
